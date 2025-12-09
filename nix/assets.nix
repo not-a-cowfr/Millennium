@@ -11,6 +11,7 @@ stdenv.mkDerivation rec {
   pnpmDeps = pnpm.fetchDeps {
     inherit src version pname;
     hash = "sha256-/FR6hFs/JGBAQEp58dw/DUvD1lTo0u5IBFCiveskgBc=";
+    lockfile = ../assets/pnpm-lock.yaml;
     fetcherVersion = 2;
   };
   nativeBuildInputs = [

@@ -21,7 +21,7 @@ let
       gitpython
       cssutils
       websockets
-      watchdog
+      watchdog.overridePythonAttrs (old: { doCheck = false; })
       pysocks
       pyperclip
       semver

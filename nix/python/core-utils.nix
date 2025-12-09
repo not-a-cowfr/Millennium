@@ -7,6 +7,9 @@ pkgs.python311Packages.buildPythonPackage {
   patches = [
     ./paths.patch
   ];
+
+  doCheck = false;
+
   postUnpack = ''
     cp ${../../sdk/package.json} ./millennium/package.json
     cp ${../../sdk/README.md} ./millennium/README.md

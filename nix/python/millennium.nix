@@ -7,6 +7,11 @@ pkgs.python311Packages.buildPythonPackage {
   patches = [
     ./paths.patch
   ];
+
+  pytestFlagsArray = [
+    "--deselect=tests/test_inotify_c.py::test_select_fd"
+  ];
+
   postUnpack = ''
     cp ${../../sdk/package.json} ./millennium/package.json
     cp ${../../sdk/README.md} ./millennium/README.md

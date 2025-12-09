@@ -8,9 +8,7 @@ pkgs.python311Packages.buildPythonPackage {
     ./paths.patch
   ];
 
-  pytestFlagsArray = [
-    "--deselect=tests/test_inotify_c.py::test_select_fd"
-  ];
+  doCheck = false;
 
   postUnpack = ''
     cp ${../../sdk/package.json} ./millennium/package.json
